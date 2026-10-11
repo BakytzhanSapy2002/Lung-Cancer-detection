@@ -1,0 +1,43 @@
+model,metric,mean_diff,p_value
+LogReg,ROC_AUC,0.0199,0.0534
+LogReg,F1,-0.0271,0.0034
+LogReg,BalancedAcc,0.0603,0.0637
+SVM (RBF),ROC_AUC,0.0062,0.3966
+SVM (RBF),F1,0.0002,0.6744
+SVM (RBF),BalancedAcc,-0.0081,0.2328
+kNN,ROC_AUC,-0.0056,0.2113
+kNN,F1,-0.0087,0.0843
+kNN,BalancedAcc,-0.0804,0.0023
+GaussianNB,ROC_AUC,-0.0088,0.3894
+GaussianNB,F1,-0.0033,0.6949
+GaussianNB,BalancedAcc,-0.0208,0.346
+RandomForest,ROC_AUC,0.0046,0.8469
+RandomForest,F1,0.0025,0.2132
+RandomForest,BalancedAcc,-0.017,0.5327
+GradBoost,ROC_AUC,-0.0612,0.0026
+GradBoost,F1,-0.0079,0.173
+GradBoost,BalancedAcc,-0.0518,0.033
+MLP tuned (nested CV),ROC_AUC,0.0091,0.4216
+MLP tuned (nested CV),F1,-0.014,0.033
+MLP tuned (nested CV),BalancedAcc,0.0559,0.0231
+"Bagged MLP (early-stop, no oversampling)",ROC_AUC,-0.0996,0.0084
+"Bagged MLP (early-stop, no oversampling)",F1,-0.0148,0.0408
+"Bagged MLP (early-stop, no oversampling)",BalancedAcc,-0.2662,0.0007
+MLP + oversampling,ROC_AUC,-0.0092,0.1094
+MLP + oversampling,F1,-0.0145,0.0071
+MLP + oversampling,BalancedAcc,0.0215,0.1959
+Bagged MLP,ROC_AUC,0.0194,0.2293
+Bagged MLP,F1,0.0031,0.2114
+Bagged MLP,BalancedAcc,-0.0447,0.0607
+Bagged MLP + oversampling,ROC_AUC,0.0104,0.7532
+Bagged MLP + oversampling,F1,-0.01,0.0413
+Bagged MLP + oversampling,BalancedAcc,0.0862,0.0012
+Soft-voting (BagMLP+LR+GB),ROC_AUC,0.0102,0.3028
+Soft-voting (BagMLP+LR+GB),F1,-0.0106,0.064
+Soft-voting (BagMLP+LR+GB),BalancedAcc,0.0698,0.0029
+"Hybrid-A: Stack(LR,RF,GB)->MLP",ROC_AUC,0.0092,0.5936
+"Hybrid-A: Stack(LR,RF,GB)->MLP",F1,-0.0098,0.033
+"Hybrid-A: Stack(LR,RF,GB)->MLP",BalancedAcc,0.0443,0.007
+Hybrid-B: RiskScores + Stack->MLP (proposed),ROC_AUC,-0.0054,0.1474
+Hybrid-B: RiskScores + Stack->MLP (proposed),F1,-0.0132,0.0131
+Hybrid-B: RiskScores + Stack->MLP (proposed),BalancedAcc,0.0299,0.0392
